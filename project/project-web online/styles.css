@@ -1,0 +1,314 @@
+/* Import IBM Plex Sans Thai font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;300;400;500;700&display=swap');
+
+/* Apply IBM Plex Sans Thai font to the entire website */
+body {
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+.header-container {
+    position: relative;
+    padding: 10px 0;
+    margin-top: 0;
+    background: linear-gradient(to right, #440154, #3e4a89, #2a6f97);
+    /* Gradient background */
+    color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-register {
+    position: absolute;
+    right: 20px;
+    /* ตำแหน่งทางด้านขวาของ header-container */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.login-register a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    /* ให้ปุ่มข้ามตำแหน่งกัน */
+}
+
+/* New styles for content container and information border */
+
+.content-container {
+    max-width: 800px;
+    /* Adjust the max-width as needed */
+    margin: 20px auto;
+    /* Center the container horizontally */
+    padding: 20px;
+    background-color: #f8f9fa;
+    /* Background color for the content container */
+    border: 2px solid #ddd;
+    /* Border for the content container */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.main-content {
+    text-align: center;
+    /* Center the main content */
+}
+
+.announcement {
+    margin-top: 20px;
+    /* Add space between announcement and main content */
+}
+
+.info-border {
+    margin-top: 20px;
+    /* Add space between main content and info border */
+    border: 2px solid #ddd;
+    /* Border for the info border */
+    padding: 20px;
+    text-align: center;
+    /* Center the content inside the info border */
+}
+
+.info-border img {
+    max-width: 100%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recommend-item {
+    margin: 20px auto;
+        /* Center the container horizontally */
+        padding: 20px;
+    text-align: center;
+    /* Center the content */
+}
+
+.recommend-item a {
+    display: block;
+    /* Ensure the entire area is clickable */
+    text-decoration: none;
+    color: inherit;
+}
+
+.recommend-item img {
+    width: 600px;
+    height: 200px;
+    /* Adjust dimensions as needed */
+    border-radius: 10px;
+    /* Add rounded corners */
+    transition: box-shadow 0.3s ease;
+    /* Add transition for smooth shadow effect */
+}
+
+.recommend-item img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Add shadow effect on hover */
+}
+
+.recommend-item p {
+    margin-top: 10px;
+    /* Add some space between the image and text */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Use grid with automatic column sizing */
+    gap: 20px;
+    /* Add gap between grid items */
+    
+    /* Add white background color */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-item {
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+    /* Add white background color */
+    border: 1px solid #ffffff;
+    /* Border style */
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: border-color 0.3s;
+    /* Smooth transition for border color */
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center items vertically */
+}
+
+.product-item:hover {
+    border-color: purple;
+    /* Border color on hover */
+}
+
+.product-item img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+    /* Add margin to separate image from product info */
+}
+
+.product-item button {
+    padding: 10px 20px;
+    /* Increase padding for larger button */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-item button:hover {
+    background-color: #45a049;
+}
+
+.product-info {
+    flex-grow: 1;
+    /* Allow product info to grow and fill available space */
+}
+.product-name {
+    font-weight: bold;
+    /* Make product name bold */
+}
+.product-price {
+    margin-top: 5px;
+    /* Add margin between product name and price */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
